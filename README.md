@@ -44,6 +44,14 @@ lib/
 
 ---
 
+## 🔄 App Flow
+
+Here's an overview of the website's structure and flow:
+
+![App Flow](https://github.com/user-attachments/assets/7aa54d1b-0951-451f-a604-10399de1c2d3
+)
+---
+
 ## 🚀 Getting Started
 
 To run the project locally:
