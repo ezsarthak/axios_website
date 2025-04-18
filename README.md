@@ -1,19 +1,92 @@
-# axios
+# Axios Website 🚀
 
-A new Flutter project.
+Welcome to the official repository of the **Axios Development Club Website**!  
+This project is built using **Flutter Web** and represents the online identity of **Axios**, the development club of **IIIT Bhopal**.  
+The site showcases the club's activities, team, projects, and acts as a digital hub for all things Axios.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🌐 Live Preview
 
-A few resources to get you started if this is your first Flutter project:
+[🔗 View Website](https://axios-website.onrender.com)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Built With
 
+- **Flutter Web** – for building a fast and responsive UI  
+- **Dart** – the language powering Flutter  
+- **Responsive Design** – works seamlessly across all screen sizes  
 
-npm serve .
+---
+
+## 📁 Features
+
+- ✨ Modern and clean user interface  
+- 🧑‍💻 Dedicated team showcase section  
+- 🛠️ Club projects and initiatives  
+- 📢 Announcements & updates  
+- 📱 Fully responsive layout  
+- 🎞️ Animations and custom assets to enhance UX  
+
+---
+
+## 🏗️ Project Structure
+
+```
+lib/
+├── main.dart              # App entry point
+├── models/                # Data Model
+├── screens/               # All web page screens (home, team, projects, etc.)
+├── widgets/               # Reusable UI components
+└── utils/                 # Responsive
+```
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ezsarthak/axios_website.git
+cd axios_website
+```
+
+### 2. Install dependencies
+
+```bash
+flutter pub get
+```
+
+### 3. Run the app
+
+```bash
+flutter run -d chrome
+```
+
+✅ Make sure you have Flutter installed and web support enabled.  
+Run `flutter doctor` to verify your setup.
+
+---
+
+## 📌 About Axios
+
+**Axios** is the official development club of **IIIT Bhopal**.  
+We aim to foster a collaborative environment for students to:
+
+- Explore software development
+- Contribute to open-source
+- Build impactful tech projects
+
+---
+
+## 🧑‍💻 Maintainer
+
+Made with ❤️ by **Sarthak Patil**
+
+Feel free to open issues or submit PRs to improve the project!
+
+---
