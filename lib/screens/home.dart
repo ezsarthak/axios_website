@@ -160,11 +160,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                 "Development Club \nIIIT Bhopal",
                                 style: TextStyle(
                                   fontSize:
-                                      isMobile
-                                          ? 36
-                                          : isTablet
-                                          ? 48
-                                          : 60,
+                                      MediaQuery.of(context).size.width * 0.04,
                                   letterSpacing: isMobile ? 2 : 4,
                                   color: Colors.white,
                                   fontWeight: FontWeight.w800,

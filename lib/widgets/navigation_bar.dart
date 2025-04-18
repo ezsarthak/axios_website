@@ -74,6 +74,7 @@ class _ResponsiveNavBarState extends State<ResponsiveNavBar> {
 
   Widget _buildDesktopNavBar() {
     final isMobile = ResponsiveHelper.isMobile(context);
+    final isTablet = ResponsiveHelper.isTablet(context);
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -88,7 +89,7 @@ class _ResponsiveNavBarState extends State<ResponsiveNavBar> {
           ),
         ),
         SizedBox(width: 16),
-        if (!isMobile)
+        if (!isMobile && !isTablet)
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
             child: TypewriterText(),
