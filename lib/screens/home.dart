@@ -288,40 +288,43 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                             padding: EdgeInsets.symmetric(vertical: 30),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Colors.white.withValues(alpha:.05),
+                              color: Colors.white.withValues(alpha: .05),
                               border: Border.all(
-                                color: Colors.white.withValues(alpha:.1),
+                                color: Colors.white.withValues(alpha: .1),
                                 width: 1,
                               ),
                             ),
                             child:
                                 isMobile
-                                    ? Column(
-                                      children: [
-                                        AnimatedCounter(
-                                          count: 500,
-                                          label: "Members",
-                                          icon: Icons.people,
-                                        ),
-                                        SizedBox(height: 30),
-                                        AnimatedCounter(
-                                          count: 50,
-                                          label: "Projects",
-                                          icon: Icons.code,
-                                        ),
-                                        SizedBox(height: 30),
-                                        AnimatedCounter(
-                                          count: 30,
-                                          label: "Events",
-                                          icon: Icons.event,
-                                        ),
-                                        SizedBox(height: 30),
-                                        AnimatedCounter(
-                                          count: 15,
-                                          label: "Awards",
-                                          icon: Icons.emoji_events,
-                                        ),
-                                      ],
+                                    ? Container(
+                                      width: double.maxFinite,
+                                      child: Column(
+                                        children: [
+                                          AnimatedCounter(
+                                            count: 500,
+                                            label: "Members",
+                                            icon: Icons.people,
+                                          ),
+                                          SizedBox(height: 30),
+                                          AnimatedCounter(
+                                            count: 50,
+                                            label: "Projects",
+                                            icon: Icons.code,
+                                          ),
+                                          SizedBox(height: 30),
+                                          AnimatedCounter(
+                                            count: 30,
+                                            label: "Events",
+                                            icon: Icons.event,
+                                          ),
+                                          SizedBox(height: 30),
+                                          AnimatedCounter(
+                                            count: 15,
+                                            label: "Awards",
+                                            icon: Icons.emoji_events,
+                                          ),
+                                        ],
+                                      ),
                                     )
                                     : Row(
                                       mainAxisAlignment:
@@ -517,8 +520,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                 ),
                       ),
 
-                      TechStackShowcase(),
-                      SizedBox(height: 80),
+                      if (!isMobile) TechStackShowcase(),
+                      if (!isMobile) SizedBox(height: 80),
                       ProjectShowcase(),
                       SizedBox(height: 80),
 

@@ -82,7 +82,7 @@ class _TeamCardState extends State<TeamCard>
                     : isTablet
                     ? 280
                     : 320,
-            height: isMobile ? 425 : 455,
+            height: isMobile ? 455 : 455,
             decoration: BoxDecoration(
               color: const Color(0xFF1E0A5C),
               borderRadius: BorderRadius.circular(20),

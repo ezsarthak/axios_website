@@ -156,6 +156,15 @@ class _ResponsiveNavBarState extends State<ResponsiveNavBar> {
                 _buildMobileNavItem("Blogs", 2),
                 _buildMobileNavItem("Events", 3),
                 _buildMobileNavItem("Team", 4),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.restorablePushNamed(context, "about");
+                  },
+                  child: CircleAvatar(
+                    radius: 20,
+                    foregroundImage: AssetImage("assets/image.png"),
+                  ),
+                ),
               ],
             ),
           ),

@@ -61,94 +61,98 @@ class _EventCountdownState extends State<EventCountdown>
     final isMobile = ResponsiveHelper.isMobile(context);
 
     return Container(
-      padding: EdgeInsets.symmetric(
-        vertical: 40,
-        horizontal: isMobile ? 20 : 20,
-      ),
+      width: double.maxFinite,
+      margin: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color(0xFF8A6BF6).withValues(alpha:.2),
-            Color(0xFF6B8AF6).withValues(alpha:.2),
+            Color(0xFF8A6BF6).withValues(alpha: .2),
+            Color(0xFF6B8AF6).withValues(alpha: .2),
           ],
         ),
-        border: Border.all(color: Color(0xFF8A6BF6).withValues(alpha:.3), width: 2),
+        border: Border.all(
+          color: Color(0xFF8A6BF6).withValues(alpha: .3),
+          width: 2,
+        ),
       ),
-      child: Column(
-        children: [
-          Text(
-            "Upcoming Event",
-            style: TextStyle(
-              fontSize: isMobile ? 16 : 18,
-              color: Colors.white60,
-            ),
-          ),
-          SizedBox(height: 10),
-          AnimatedBuilder(
-            animation: _pulseAnimation,
-            builder: (context, child) {
-              return Transform.scale(
-                scale: _pulseAnimation.value,
-                child: Text(
-                  widget.eventName,
-                  style: TextStyle(
-                    fontSize: isMobile ? 28 : 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              );
-            },
-          ),
-          SizedBox(height: 30),
-          isMobile
-              ? Column(
-                children: [
-                  _buildTimeUnit(_timeRemaining.inDays, "Days"),
-                  SizedBox(height: 20),
-                  _buildTimeUnit(_timeRemaining.inHours % 24, "Hours"),
-                  SizedBox(height: 20),
-                  _buildTimeUnit(_timeRemaining.inMinutes % 60, "Minutes"),
-                  SizedBox(height: 20),
-                  _buildTimeUnit(_timeRemaining.inSeconds % 60, "Seconds"),
-                ],
-              )
-              : Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _buildTimeUnit(_timeRemaining.inDays, "Days"),
-                  _buildTimeUnit(_timeRemaining.inHours % 24, "Hours"),
-                  _buildTimeUnit(_timeRemaining.inMinutes % 60, "Minutes"),
-                  _buildTimeUnit(_timeRemaining.inSeconds % 60, "Seconds"),
-                ],
-              ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFF8A6BF6),
-              foregroundColor: Colors.white,
-              padding: EdgeInsets.symmetric(
-                horizontal: isMobile ? 20 : 30,
-                vertical: 15,
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-            ),
-            child: Text(
-              "Register Now",
+      child: SizedBox(
+        child: Column(
+          children: [
+            Text(
+              "Upcoming Event",
               style: TextStyle(
-                fontSize: isMobile ? 14 : 16,
-                fontWeight: FontWeight.bold,
+                fontSize: isMobile ? 16 : 18,
+                color: Colors.white60,
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 10),
+            AnimatedBuilder(
+              animation: _pulseAnimation,
+              builder: (context, child) {
+                return Transform.scale(
+                  scale: _pulseAnimation.value,
+                  child: Text(
+                    widget.eventName,
+                    style: TextStyle(
+                      fontSize: isMobile ? 28 : 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                );
+              },
+            ),
+            SizedBox(height: 30),
+            isMobile
+                ? Column(
+                  children: [
+                    _buildTimeUnit(_timeRemaining.inDays, "Days"),
+                    SizedBox(height: 20),
+                    _buildTimeUnit(_timeRemaining.inHours % 24, "Hours"),
+                    SizedBox(height: 20),
+                    _buildTimeUnit(_timeRemaining.inMinutes % 60, "Minutes"),
+                    SizedBox(height: 20),
+                    _buildTimeUnit(_timeRemaining.inSeconds % 60, "Seconds"),
+                  ],
+                )
+                : Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _buildTimeUnit(_timeRemaining.inDays, "Days"),
+                    _buildTimeUnit(_timeRemaining.inHours % 24, "Hours"),
+                    _buildTimeUnit(_timeRemaining.inMinutes % 60, "Minutes"),
+                    _buildTimeUnit(_timeRemaining.inSeconds % 60, "Seconds"),
+                  ],
+                ),
+            SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFF8A6BF6),
+                foregroundColor: Colors.white,
+                padding: EdgeInsets.symmetric(
+                  horizontal: isMobile ? 20 : 30,
+                  vertical: 15,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              child: Text(
+                "Register Now",
+                style: TextStyle(
+                  fontSize: isMobile ? 14 : 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            if (isMobile) SizedBox(height: 12),
+          ],
+        ),
       ),
     );
   }

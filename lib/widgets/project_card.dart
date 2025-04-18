@@ -74,7 +74,7 @@ class _ProjectCardState extends State<ProjectCard>
                     : isTablet
                     ? 380
                     : 420,
-            height: isMobile ? 380 : 420,
+            height: isMobile ? 420 : 420,
             decoration: BoxDecoration(
               color: const Color(0xFF1A1A2E),
               borderRadius: BorderRadius.circular(20),
@@ -82,8 +82,8 @@ class _ProjectCardState extends State<ProjectCard>
                 BoxShadow(
                   color:
                       isHovered
-                          ? widget.accentColor.withValues(alpha:.3)
-                          : Colors.black.withValues(alpha:.3),
+                          ? widget.accentColor.withValues(alpha: .3)
+                          : Colors.black.withValues(alpha: .3),
                   blurRadius: isHovered ? 16 : 10,
                   spreadRadius: isHovered ? 2 : 1,
                   offset: const Offset(0, 8),
@@ -137,7 +137,7 @@ class _ProjectCardState extends State<ProjectCard>
                               end: Alignment.bottomCenter,
                               colors: [
                                 Colors.transparent,
-                                Colors.black.withValues(alpha:.7),
+                                Colors.black.withValues(alpha: .7),
                               ],
                               stops: const [0.6, 1.0],
                             ),
@@ -202,7 +202,9 @@ class _ProjectCardState extends State<ProjectCard>
                                   Icon(
                                     Icons.code,
                                     size: 16,
-                                    color: widget.accentColor.withValues(alpha:.8),
+                                    color: widget.accentColor.withValues(
+                                      alpha: .8,
+                                    ),
                                   ),
                                   const SizedBox(width: 6),
                                   const Text(
@@ -246,7 +248,7 @@ class _ProjectCardState extends State<ProjectCard>
                                 tooltip: 'View Source Code',
                                 style: IconButton.styleFrom(
                                   backgroundColor: Colors.grey.shade800
-                                      .withValues(alpha:.5),
+                                      .withValues(alpha: .5),
                                   padding: const EdgeInsets.all(12),
                                 ),
                               ),
