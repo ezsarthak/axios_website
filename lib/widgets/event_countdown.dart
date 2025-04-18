@@ -81,6 +81,7 @@ class _EventCountdownState extends State<EventCountdown>
       child: SizedBox(
         child: Column(
           children: [
+            SizedBox(height: 12),
             Text(
               "Upcoming Event",
               style: TextStyle(
@@ -128,7 +129,7 @@ class _EventCountdownState extends State<EventCountdown>
                     _buildTimeUnit(_timeRemaining.inSeconds % 60, "Seconds"),
                   ],
                 ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
@@ -150,7 +151,8 @@ class _EventCountdownState extends State<EventCountdown>
                 ),
               ),
             ),
-            if (isMobile) SizedBox(height: 12),
+            if (!isMobile) SizedBox(height: 12),
+            SizedBox(height: 12),
           ],
         ),
       ),

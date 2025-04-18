@@ -292,7 +292,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                             ),
                             child:
                                 isMobile
-                                    ? Container(
+                                    ? SizedBox(
                                       width: double.maxFinite,
                                       child: Column(
                                         children: [
