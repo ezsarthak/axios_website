@@ -1,4 +1,3 @@
-// utils/responsive_helper.dart
 import 'package:flutter/material.dart';
 
 enum DeviceType { mobile, tablet, desktop }

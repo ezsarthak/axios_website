@@ -1,3 +1,4 @@
+import 'package:axios/screens/about.dart';
 import 'package:axios/screens/blogs.dart';
 import 'package:axios/screens/events.dart';
 import 'package:axios/screens/home.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         'nav': (context) => Navigator(),
         '': (context) => Navigation(),
         'roadmap': (context) => RoadmapScreen(),
+        'about': (context) => AboutScreen(),
       },
       theme: ThemeData(
         fontFamily: 'Montserrat',
