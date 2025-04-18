@@ -1,6 +1,6 @@
 # Axios Website 🚀
 
-Welcome to the official repository of the **Axios Development Club Website**!  
+Welcome to the repository of the **Axios Development Club Website**!  
 This project is built using **Flutter Web** and represents the online identity of **Axios**, the development club of **IIIT Bhopal**.  
 The site showcases the club's activities, team, projects, and acts as a digital hub for all things Axios.
 
