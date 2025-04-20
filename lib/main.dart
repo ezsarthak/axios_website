@@ -50,6 +50,7 @@ class _NavigationState extends State<Navigation> {
     BlogsScreen(),
     EventsScreen(),
     TeamScreen(),
+    AboutScreen(),
   ];
   int currIndex = 0;
 

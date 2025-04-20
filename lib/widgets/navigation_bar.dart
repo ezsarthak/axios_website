@@ -105,15 +105,16 @@ class _ResponsiveNavBarState extends State<ResponsiveNavBar> {
         SizedBox(width: 32),
         _buildNavItem("Team", 4),
         SizedBox(width: 32),
-        GestureDetector(
-          onTap: () {
-            Navigator.restorablePushNamed(context, "about");
-          },
-          child: CircleAvatar(
-            radius: 28,
-            foregroundImage: AssetImage("assets/image.png"),
-          ),
-        ),
+        // GestureDetector(
+        //   onTap: () {
+        //     Navigator.restorablePushNamed(context, "about");
+        //   },
+        //   child: CircleAvatar(
+        //     radius: 28,
+        //     foregroundImage: AssetImage("assets/image.png"),
+        //   ),
+        // ),
+        _buildNavItem("About", 5),
       ],
     );
   }
@@ -157,15 +158,7 @@ class _ResponsiveNavBarState extends State<ResponsiveNavBar> {
                 _buildMobileNavItem("Blogs", 2),
                 _buildMobileNavItem("Events", 3),
                 _buildMobileNavItem("Team", 4),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.restorablePushNamed(context, "about");
-                  },
-                  child: CircleAvatar(
-                    radius: 20,
-                    foregroundImage: AssetImage("assets/image.png"),
-                  ),
-                ),
+                _buildMobileNavItem("About", 5),
               ],
             ),
           ),
